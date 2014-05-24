@@ -12,16 +12,15 @@
  * @version ##version_placeholder##
  */
 
-namespace Elcodi\CouponBundle\Tests\Functional\Form\Type;
+namespace Elcodi\CouponBundle\Tests\Functional\Factory;
 
 use Elcodi\CoreBundle\Tests\WebTestCase;
 
 /**
- * Tests CouponType class
+ * Class CouponFactoryTest
  */
-class CouponTypeTest extends WebTestCase
+class CouponFactoryTest extends WebTestCase
 {
-
     /**
      * Returns the callable name of the service
      *
@@ -29,6 +28,17 @@ class CouponTypeTest extends WebTestCase
      */
     public function getServiceCallableName()
     {
-        return 'elcodi.core.coupon.form_type.coupon';
+        return 'elcodi.core.coupon.factory.coupon';
+    }
+
+    /**
+     * Test coupon factory provider
+     */
+    public function testFactoryProvider()
+    {
+        $this->assertInstanceOf(
+            $this->container->getParameter('elcodi.core.coupon.entity.coupon.class'),
+            $this->container->get('elcodi.core.coupon.entity.coupon.instance')
+        );
     }
 }

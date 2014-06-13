@@ -8,15 +8,17 @@
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  *
- * @author  * @version  */
+ * @author  ##author_placeholder
+ * @version ##version_placeholder##
+ */
 
 namespace Elcodi\CouponBundle\Event;
 
 use Elcodi\CouponBundle\Event\Abstracts\CouponEvent;
 
 /**
- * Class CouponUsedEvent
+ * Class CouponOnUsedEvent
  */
-class CouponUsedEvent extends CouponEvent
+class CouponOnUsedEvent extends CouponEvent
 {
 }
